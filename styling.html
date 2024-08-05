@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="aDiv" style="border: solid 2px black"> This is a div element. Mouse over me</div><br><br>
+
+    <div id="box">This is a box element. Click me to change color</div><br><br>
+
+    <p id="paragraph">THis is a parapgraph element. Double click me</p><br><br>
+
+    <button id="button" onclick="changeFont()">Click me to change font</button><br><br><br><br>
+
+    <img id="image" src="images/laptop.jpg" width = "150px" alt="laptop" onclick="changeImage()">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        
+        const aDiv = document.getElementById('aDiv');
+        aDiv.addEventListener('mouseover', () => {
+            aDiv.style.backgroundColor = 'red';
+        });
+        aDiv.addEventListener('mouseout', () => {
+            aDiv.style.backgroundColor = 'white';
+        });
+
+        const box = document.getElementById('box');
+        box.addEventListener("click",()=>{box.style.background = "green";
+    });
+
+        const paragraph = document.getElementById('paragraph');
+        paragraph.addEventListener("dblclick",()=>{paragraph.style.fontSize = "32px";
+    });
+
+        const button = document.getElementById('button');
+        button.addEventListener("click",()=>{button.style.fontFamily = "Calibri";
+    });
+
+        const image = document.getElementById('image');
+        image.addEventListener("mouseover",()=>{image.src = "images/smartphone.jpg";
+    });
+    
+    });
+
+    </script>
+</body>
+</html>
